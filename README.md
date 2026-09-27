@@ -1,23 +1,39 @@
-# devops-netology
+# hm-git-basics
 
-Репозиторий для курса **DevOps** в Нетологии.
+Домашнее задание к занятию «Основы Git».
 
-Здесь я буду сохранять скрипты, конфигурации и практические работы, чтобы к ним можно было вернуться в любой момент курса.
+## Репозитории
 
-## Что игнорирует Git
+- GitHub: https://github.com/kinnwailos/hm-git-basics
+- GitLab: https://gitlab.com/kinnwailos/hm-git-basics
 
-В корне лежит `.gitignore` — он не даёт попасть в репозиторий служебным файлам системы и редактора (`.DS_Store`, `.idea/`, `.vscode/`), секретам (`.env`, ключи `*.pem` / `*.key`) и временным логам.
+## Задание 1. Несколько remote
 
-В каталоге `terraform/` лежит отдельный `.gitignore` по [официальному шаблону GitHub](https://github.com/github/gitignore/blob/master/Terraform.gitignore). Символ `*` в правилах gitignore означает любую последовательность символов (в том числе пустую). Будут игнорироваться:
+Настроены два удалённых репозитория:
 
-- каталог с точным именем `.terraform/` и всё его содержимое;
-- все файлы, имя которых заканчивается на `.tfstate` (`*.tfstate`);
-- все файлы, в имени которых есть сочетание `.tfstate.` — любое начало, затем `.tfstate.`, затем любое окончание (`*.tfstate.*`);
-- файл с точным именем `crash.log`;
-- все файлы, имя которых начинается с `crash.`, заканчивается на `.log`, а между ними стоят любые символы (`crash.*.log`);
-- все файлы, имя которых заканчивается на `.tfvars` (`*.tfvars`);
-- все файлы, имя которых заканчивается на `.tfvars.json` (`*.tfvars.json`);
-- файлы с точными именами `override.tf` и `override.tf.json`;
-- все файлы, имя которых заканчивается на `_override.tf` (`*_override.tf`);
-- все файлы, имя которых заканчивается на `_override.tf.json` (`*_override.tf.json`);
-- файлы с точными именами `.terraform.tfstate.lock.info`, `.terraformrc` и `terraform.rc`.
+- `origin` — GitHub
+- `gitlab` — GitLab
+
+Ветка `main` запушена в оба репозитория. Проверка: `git remote -v`.
+
+## Задание 2. Теги
+
+На HEAD ветки `main` созданы и запушены теги:
+
+- `v0.0` — легковесный тег
+- `v0.1` — аннотированный тег
+
+- GitHub: https://github.com/kinnwailos/hm-git-basics/tags
+- GitLab: https://gitlab.com/kinnwailos/hm-git-basics/-/tags
+
+Легковесный тег указывает прямо на коммит. Аннотированный — отдельный объект с автором, датой и сообщением.
+
+## Задание 3. Ветки
+
+От коммита «Prepare to delete and move» (`adb5c39`) создана ветка `fix`, изменения запушены на GitHub и GitLab.
+
+Схема веток: https://github.com/kinnwailos/hm-git-basics/network
+
+## Задание 4. IDE
+
+На ветке `fix` выполнены коммиты через визуальный интерфейс IDE.

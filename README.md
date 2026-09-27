@@ -37,3 +37,14 @@
 ## Задание 4. IDE
 
 На ветке `fix` выполнены коммиты через визуальный интерфейс IDE.
+
+## Скриншоты
+
+| Задание | Файл |
+|---------|------|
+| 1. Remotes | [screenshots/remotes.png](screenshots/remotes.png) |
+| 2. Теги GitHub | [screenshots/github_tags.png](screenshots/github_tags.png) |
+| 2. Аннотированный тег v0.1 | [screenshots/github_tag_v01.png](screenshots/github_tag_v01.png) |
+| 2. Теги GitLab | [screenshots/gitlab_tags.png](screenshots/gitlab_tags.png) |
+| 3. Схема веток | [screenshots/branch_diagram.png](screenshots/branch_diagram.png) |
+| 4. Git-панель IDE | [screenshots/the_git_panel.png](screenshots/the_git_panel.png) |

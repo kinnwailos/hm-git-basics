@@ -1,18 +1,41 @@
-# devops-netology
+# hm-git-basics
 
-Репозиторий для курса **DevOps** в Нетологии.
+Домашнее задание к занятию «Основы Git».
 
-Здесь я буду сохранять скрипты, конфигурации и практические работы, чтобы к ним можно было вернуться в любой момент курса.
+## Репозитории
 
-## Что игнорирует Git
+- GitHub: https://github.com/kinnwailos/hm-git-basics
+- GitLab: https://gitlab.com/kinnwailos/hm-git-basics
 
-В корне лежит `.gitignore` — он не даёт попасть в репозиторий служебным файлам системы и редактора (`.DS_Store`, `.idea/`, `.vscode/`), секретам (`.env`, ключи `*.pem` / `*.key`) и временным логам.
+## Задание 1. Несколько remote
 
-В каталоге `terraform/` лежит отдельный `.gitignore` по [официальному шаблону GitHub](https://github.com/github/gitignore/blob/master/Terraform.gitignore). Благодаря ему Git не будет отслеживать:
+Настроены два удалённых репозитория:
 
-- локальный кэш провайдеров `.terraform/`;
-- файлы состояния `*.tfstate` и их резервные копии — в них могут быть реальные адреса и секреты инфраструктуры;
-- переменные `*.tfvars`, где обычно лежат пароли и ключи;
-- локальные override-файлы и настройки CLI Terraform.
+- `origin` — GitHub
+- `gitlab` — GitLab
+
+Ветка `main` запушена в оба репозитория. Проверка: `git remote -v`.
+
+## Задание 2. Теги
+
+На HEAD ветки `main` созданы и запушены теги:
+
+- `v0.0` — легковесный тег
+- `v0.1` — аннотированный тег
+
+- GitHub: https://github.com/kinnwailos/hm-git-basics/tags
+- GitLab: https://gitlab.com/kinnwailos/hm-git-basics/-/tags
+
+Легковесный тег указывает прямо на коммит. Аннотированный — отдельный объект с автором, датой и сообщением.
+
+## Задание 3. Ветки
+
+От коммита «Prepare to delete and move» (`adb5c39`) создана ветка `fix`, изменения запушены на GitHub и GitLab.
+
+Схема веток: https://github.com/kinnwailos/hm-git-basics/network
 
 Ветка `fix` создана от коммита «Prepare to delete and move», чтобы исправить ошибку в старой версии и посмотреть, как расходится история.
+
+## Задание 4. IDE
+
+На ветке `fix` выполнены коммиты через визуальный интерфейс IDE.
